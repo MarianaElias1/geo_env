@@ -92,6 +92,28 @@ dset_4 = xr.open_dataset(r'c:\Users\eliaslm\geo_env\data\Climate_Model_Data\tas_
 dset_5 = xr.open_dataset(r'c:\Users\eliaslm\geo_env\data\Climate_Model_Data\tas_Amon_GFDL-ESM4_ssp585_r1i1p1f1_gr1_201501-210012.nc')
 
 
+start_date = dset_1.time[0].values
+end_date   = dset_1.time[-1].values
+print(start_date, end_date)
+
+start_date = dset_2.time[0].values
+end_date   = dset_2.time[-1].values
+print(start_date, end_date)
+
+# start_date = dset_3.time[0].values
+# end_date   = dset_3.time[-1].values
+# print(start_date, end_date)
+
+# start_date = dset_4.time[0].values
+# end_date   = dset_4.time[-1].values
+# print(start_date, end_date)
+
+# start_date = dset_5.time[0].values
+# end_date   = dset_5.time[-1].values
+# print(start_date, end_date)
+
+
+
 # 1. Calculate the mean air temperature map for 1850-1900 (also known as the pre-industrial period) using the command:
 mean_1850_1900 = np.mean(dset_1['tas'].sel(time=slice('18500101','19001231')), axis=0)
 
