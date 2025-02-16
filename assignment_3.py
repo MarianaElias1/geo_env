@@ -47,15 +47,9 @@ df_isd.idxmax()
 # 5. The ISD is a global dataset and time is expressed in Universal Coordinated Time (UTC).   
 # What is the local time of the highest HI?
 
-# Highest HI in UTC 
 highest_hi_utc_str = "2024-08-10 11:00:00"
-
-# Convert the string to a pandas Timestamp in UTC
 timestamp_utc = pd.Timestamp(highest_hi_utc_str, tz="UTC")
-
-# Convert to local time zone: for example, Riyadh is "Asia/Riyadh"
 timestamp_local = timestamp_utc.tz_convert("Asia/Riyadh")
-
 print("Highest HI in local time:", timestamp_local)
 
 ### Checar ### Should we modify the columns?
